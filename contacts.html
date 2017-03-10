@@ -397,7 +397,7 @@
         var map;
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 34.0151244, lng: -118.4729871},
+                center: {lat: 40.741895, lng: -73.989308},
                 zoom: 12,
                 scrollwheel: false//set to true to enable mouse scrolling while inside the map area
             });
@@ -428,14 +428,14 @@
             </div>
         </div>
 
-        <form class="contact-form" method="post" action="https://formspree.io/sales@marketmonk.co">
+        <form class="contact-form" name="gform" id="gform" method="post" action="https://docs.google.com/forms/d/1FAIpQLSdcSWDouxWFESlNcYJApBf7P57I2TIncN_Y3gLJWSibXHc8Tg/formResponse">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <input name="permalink" class="email input-standard-grey" placeholder="Website URL" type="text">
+                    <input name="entry.1065046570" id="entry.1065046570" class="email input-standard-grey" placeholder="Website URL" type="text">
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <input name="name" class="email input-standard-grey" placeholder="Your Name" type="text" required>
+                    <input id="entry.2005620554" name="entry.2005620554" class="email input-standard-grey" placeholder="Your Name" type="text" required>
                 </div>
 
             </div>
@@ -443,18 +443,18 @@
             <div class="row">
 
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <input name="email" class="email input-standard-grey" placeholder="Email Address" type="email" required>
+                    <input name="entry.1045781291" id="entry.1045781291" class="email input-standard-grey" placeholder="Email Address" type="email" required>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <input name="phone" class="email input-standard-grey" placeholder="Phone" type="text">
+                    <input name="entry.1166974658" id="entry.1166974658" class="email input-standard-grey" placeholder="Phone" type="text">
                 </div>
 
             </div>
 
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <textarea name="message" class="email input-standard-grey" placeholder="Details"></textarea>
+                    <textarea name="entry.839337160" id="entry.839337160" class="email input-standard-grey" placeholder="Details"></textarea>
                 </div>
             </div>
             <input type="hidden" name="_next" value="http://tripchalo.com/contacts.html" />
@@ -477,6 +477,7 @@
                 </div>
             </div>
         </form>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
     </div>
 </div>
 
@@ -734,7 +735,13 @@
 <script src="js/ajax-pagination.js"></script>
 
 <!-- ...end JS Script -->
-
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed...');
+  });
+</script>
 
 </body>
 </html>
