@@ -313,7 +313,7 @@
     <div class="container">
         <div class="row">
             <div class="form_search-wrap">
-                <form>
+                <form> 
                     <input class="overlay_search-input" placeholder="Type and hit Enter..." type="text">
                     <a href="#" class="overlay_search-close">
                         <span></span>
@@ -428,7 +428,7 @@
             </div>
         </div>
 
-        <form class="contact-form" method="post" action="send_mail.php">
+        <form class="contact-form" method="post" action="https://formspree.io/sales@marketmonk.co">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <input name="permalink" class="email input-standard-grey" placeholder="Website URL" type="text">
@@ -457,11 +457,13 @@
                     <textarea name="message" class="email input-standard-grey" placeholder="Details"></textarea>
                 </div>
             </div>
+            <input type="hidden" name="_next" value="http://tripchalo.com/contacts.html" />
+            <input type="hidden" name="_subject" value="Enquiry From MarketMonk Contact" />
 
             <div class="row">
                 <div class="submit-block table">
                     <div class="col-lg-3 table-cell">
-                        <button class="btn btn-small btn--primary">
+                        <button type="submit" class="btn btn-small btn--primary">
                             <span class="text">Submit Now</span>
                         </button>
                     </div>
